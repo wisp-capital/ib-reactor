@@ -29,6 +29,11 @@ allprojects {
     }
 }
 
+java {
+    sourceCompatibility = org.gradle.api.JavaVersion.VERSION_18
+    targetCompatibility = org.gradle.api.JavaVersion.VERSION_18
+}
+
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
@@ -38,8 +43,8 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "com.github.wisp-capital"
-            artifactId = "ib-reactor"
-            version = "1.0.0"
+            artifactId = "ib_reactor"
+            version = "1.0.2"
 
             from(components["java"])
         }
