@@ -6,7 +6,6 @@ plugins {
     `maven-publish`
 }
 
-version = "1.0"
 group = "com.github.wisp-capital"
 
 
@@ -21,18 +20,6 @@ dependencies {
     implementation("com.google.guava:guava:31.1-jre")
     implementation("joda-time:joda-time:2.10.14")
     implementation("org.slf4j:slf4j-simple:2.0.0-alpha0")
-}
-
-tasks.jar {
-    manifest {
-        attributes(
-            mapOf(
-                "Implementation-Title" to rootProject.name,
-                "Implementation-Version" to project.version
-            )
-        )
-    }
-    archiveFileName.set("ib_reactor.jar")
 }
 
 allprojects {
@@ -52,7 +39,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.wisp-capital"
             artifactId = "ib-reactor"
-            version = "0.0.5"
+            version = "1.0.0"
 
             from(components["java"])
         }
