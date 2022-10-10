@@ -12,6 +12,7 @@ group = "com.github.wisp-capital"
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io")
 }
 
 dependencies {
@@ -21,13 +22,6 @@ dependencies {
     implementation("com.google.guava:guava:31.1-jre")
     implementation("joda-time:joda-time:2.10.14")
     implementation("org.slf4j:slf4j-simple:2.0.0-alpha0")
-}
-
-allprojects {
-    repositories {
-        mavenCentral()
-        maven("https://jitpack.io")
-    }
 }
 
 java {
