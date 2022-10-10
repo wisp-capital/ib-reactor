@@ -168,3 +168,6 @@ data/
 .env
 secrets/
 
+
+gradle.properties
+
